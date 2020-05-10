@@ -67,19 +67,23 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
   			<br>Room Size [3, 2]; Player Location [1, 1]; Guard Location [2, 1] and a distance 4 units.</p>
   			<p> My first idea was to set a fix general coordinate system where x = 0 degrees and calculate the new angle each time the laser bounced off the wall.
   			Unfortunately I ran into a few problems with this idea, mainly that there can be an infinite amount of angles that you can shoot in.</p>
-  			<p>The other approach at hand is to mirror the room in question, to determine the possible location of each guard and weather we can shoot him. This is the method that we will use. </p>
+  			<p>The other approach is to mirror the room in question, to determine the possible locations of each guard and whether we can shoot him. This is the method that we will use. </p>
   		</td>
   		<td style="background-color:#d0d0a5">
   			<img src="{{ site.baseurl }}/assets/img/posts/post1/inital_example.png" height="320" width="500" style="border:2px solid black ; margin:0px 20px">
-  			O = Player Position; X = Guard position
+  			O = Player Position; X = Guard position <div align="right"> Figure 1</div>
   		</td>
   	</tr>
   	<tr>
   		<td style="background-color:#d0d0a5">
-  			<p>In the image on the right we have mirrored the room along the top wall</p>
+  			<p>Figure 2 shows us that we have mirrored the room along the North wall. 
+  				<br>Shooting the guard in the mirrored room is the equivalent of shooting the guard at 63 deg angle and have it bounce off the wall in the same room.</p> 
+  			<p class="math-display">$$\sqrt {(x_2-x_1)^2 +(y_2-y_1)^2}$$
+  			</p>
   		</td>
   		<td style="background-color:#d0d0a5">
   			<img src="{{ site.baseurl }}/assets/img/posts/post1/mirror_ex.png" height="600" width="500" style="border:2px solid black ; margin:0px 20px">
+  			<div align="right"> Figure 2</div>
   		</td>
   	</tr>
 </table>
