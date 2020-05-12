@@ -7,9 +7,7 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 <table>
   	<tr>
     	<th style="text-align: center; vertical-align: middle;">
-    		<img src="{{ site.baseurl }}/assets/img/posts/post1/asdds.png" height="110" style="border:5px solid black" align="middle">
-    		<img src="{{ site.baseurl }}/assets/img/posts/post1/asdds.png" height="110" style="border:5px solid black" align="middle">
-    		<img src="{{ site.baseurl }}/assets/img/posts/post1/asdds.png" height="110" style="border:5px solid black" align="middle">
+    		<img src="{{ site.baseurl }}/assets/img/posts/post1/aline_gun.png" height="110" style="border:5px solid black" align="middle">
     	</th>
     	<th>
     		<a href="https://github.com/peter-ak/google_foobar"><img src="https://gh-card.dev/repos/peter-ak/google_foobar.svg"></a>
@@ -17,7 +15,7 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
   	</tr>
   	<tr>
     	<td colspan="2">
-    		Level 4 question from the Google foobar challenge. How many ways can you hit a guard with a laser without hitting your self?
+    		Level 4 question from the Google foobar challenge. How many ways can you hit a guard with a laser without hitting your-self? {Python}
 		</td>
   	</tr>
 </table>
@@ -71,19 +69,59 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
   		</td>
   		<td style="background-color:#d0d0a5">
   			<img src="{{ site.baseurl }}/assets/img/posts/post1/inital_example.png" height="320" width="500" style="border:2px solid black ; margin:0px 20px">
-  			O = Player Position; X = Guard position <div align="right"> Figure 1</div>
+  			O = Player Position; X = Guard position <div align="right"> Figure 1.</div>
   		</td>
   	</tr>
   	<tr>
   		<td style="background-color:#d0d0a5">
-  			<p>Figure 2 shows us that we have mirrored the room along the North wall. 
-  				<br>Shooting the guard in the mirrored room is the equivalent of shooting the guard at 63 deg angle and have it bounce off the wall in the same room.</p> 
-  			<p class="math-display">$$\sqrt {(x_2-x_1)^2 +(y_2-y_1)^2}$$
-  			</p>
+  			<p>Figure 2. shows us that we have mirrored the room along the North wall. 
+  				<br>Shooting the guard in the mirrored room is the equivalent of shooting the guard at 63 deg angle and have it bounce off the wall in the same room. [After the first bounce, the laser in the red has the same distance and angle as the laser in the white]</p>
+  				<p><b>1) Get all the 1st quadrant's Guard + Player positions. (positive x; positive y)</b>
+  				{% highlight js %}max_x = player_x_position + laser_distance{% endhighlight %}
+  				5 = 1 + 4, the same goes for the y position.
+  				{% highlight js %}ceil(max_x / room_x)  --> celing(5/3) = 2 {% endhighlight %}
+  				{% highlight js %}ceil(max_y / room_y)  --> celing(5/2) = 3 {% endhighlight %}
+  				As you can see, we need to perform mirror 3x along the y axis of the room, but only 2x along the x axis. (see Figure 3.)</p> 
   		</td>
   		<td style="background-color:#d0d0a5">
   			<img src="{{ site.baseurl }}/assets/img/posts/post1/mirror_ex.png" height="600" width="500" style="border:2px solid black ; margin:0px 20px">
-  			<div align="right"> Figure 2</div>
+  			<div align="right"> Figure 2.</div>
   		</td>
   	</tr>
+    <tr>
+      <td style="background-color:#d0d0a5">
+        <p><b>2) Reflect the position of all the 1st quadrant to the other 3 quadrants.</b>
+          <br>A list for each position was generated in the first step : <br> [x_coords, y_coords, Player = 1 or Guard = 7]
+          {% highlight js %} position_list_first_quadrant = 
+          [[1, 1, 1], [2, 1, 7], [2, 3, 7] ..] {% endhighlight %}</p>
+          <p>
+            We can simply multiply the x and y by the appropriate sign to get back all the other quadrants
+            <br> 2nd Quadrant : [-1 * x, y]
+            <br> 3nd Quadrant : [-1 * x, -1 * y]
+            <br> 4nd Quadrant : [x, -1 * y]
+          </p>
+      </td>
+      <td style="background-color:#d0d0a5">
+        <div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post1/mirror_ex_fq.png" height="600" width="500" style="border:2px solid black"></div>
+        <div align="right"> Figure 3.</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color:#d0d0a5">
+        <p><b>3) Filter all the Player + Guard positions by distance.</b>
+          </p>
+      </td>
+      <td style="background-color:#d0d0a5">
+        <p><b>3) Filter all the Player + Guard positions by distance.</b>
+          </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="background-color:#d0d0a5">
+        <div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post1/full_grid.png" height="750" width="750" style="border:2px solid black"></div>
+        <div align="right"> Figure 3.</div>
+      </td>
+    </tr>
 </table>
+
+<!--   			<p>$$\sqrt {(x_2-x_1)^2 +(y_2-y_1)^2}$$</p> -->
