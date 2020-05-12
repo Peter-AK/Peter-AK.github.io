@@ -10,7 +10,7 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
     		<img src="{{ site.baseurl }}/assets/img/posts/post1/aline_gun.png" height="110" style="border:5px solid black" align="middle">
     	</th>
     	<th>
-    		<a href="https://github.com/peter-ak/google_foobar"><img src="https://gh-card.dev/repos/peter-ak/google_foobar.svg"></a>
+    		<a href="https://github.com/peter-ak/Bringing-a-gun-to-a-guard-fight"><img src="https://gh-card.dev/repos/peter-ak/Bringing-a-gun-to-a-guard-fight.svg"></a>
     	</th>
   	</tr>
   	<tr>
@@ -19,6 +19,9 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 		</td>
   	</tr>
 </table>
+
+
+
 
 <table>
   	<tr>
@@ -58,12 +61,14 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 			<br>&nbsp;    9
 		</td>
   	</tr>
+
+
   	<tr>
   		<td style="background-color:#d0d0a5">
   			<p><b>Analysis:</b> 
   			<br>Let us work with the given example in this problem: 
   			<br>Room Size [3, 2]; Player Location [1, 1]; Guard Location [2, 1] and a distance 4 units.</p>
-  			<p> My first idea was to set a fix general coordinate system where x = 0 degrees and calculate the new angle each time the laser bounced off the wall.
+  			<p> My first idea was to set a fix general coordinate system and calculate the new angle each time the laser bounced off the wall.
   			Unfortunately I ran into a few problems with this idea, mainly that there can be an infinite amount of angles that you can shoot in.</p>
   			<p>The other approach is to mirror the room in question, to determine the possible locations of each guard and whether we can shoot him. This is the method that we will use. </p>
   		</td>
@@ -72,6 +77,8 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
   			O = Player Position; X = Guard position <div align="right"> Figure 1.</div>
   		</td>
   	</tr>
+
+
   	<tr>
   		<td style="background-color:#d0d0a5">
   			<p>Figure 2. shows us that we have mirrored the room along the North wall. 
@@ -97,8 +104,8 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
           <p>
             We can simply multiply the x and y by the appropriate sign to get back all the other quadrants
             <br> 2nd Quadrant : [-1 * x, y]
-            <br> 3nd Quadrant : [-1 * x, -1 * y]
-            <br> 4nd Quadrant : [x, -1 * y]
+            <br> 3rd Quadrant : [-1 * x, -1 * y]
+            <br> 4th Quadrant : [x, -1 * y]
           </p>
       </td>
       <td style="background-color:#d0d0a5">
@@ -109,19 +116,40 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
     <tr>
       <td style="background-color:#d0d0a5">
         <p><b>3) Filter all the Player + Guard positions by distance.</b>
-          </p>
+		<br> If you feed 2 points into the following formula derived from the Pythagorean theorem, it will give you the distance between them. Filter all possibilities that are !GREATER! (equal is still good) to our laser distance.</p>
+		<p>$$ distance = \sqrt {(x_2-x_1)^2 +(y_2-y_1)^2}$$</p>
+		<p>Where: $$ x_1, y_1 $$ are the coordinates of the original player's position. $$ x_2, y_2 $$ are the coordinates of the mirrored player + guards.</p>
+		<p>In Figure 4 there is a guard in position [2, 5]; and player in position [1, 1]. 
+		<br>We can quickly find that the distance between them is ~4.123 > 4.0 , therefore we can quickly eliminate this position from our list.
+        </p>
       </td>
       <td style="background-color:#d0d0a5">
-        <p><b>3) Filter all the Player + Guard positions by distance.</b>
-          </p>
+        <p><b>4) Filter all the Player + Guard positions by angle.</b>
+		<br>Now let's filter all the player + guards that have the same angle. Remember we can't shoot a guard that is behind a player or another guard, we can only shoot the closest character for each unique angle.</p>
+		<p>From Wiki:
+		"The function atan2(y,x) is defined as the angle in the Euclidean plane, given in radians, between the positive x axis and the ray to the point (x, y) ≠ (0, 0)."
+		<br> atan2 is available from the math module in python 2.7 standard lib</p>
+        <p>
+		If you take a look at Figure 4. you can see that everything behind the guard at [2, 1] is unshootable.
+		</p>
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="background-color:#d0d0a5">
+      <td colspan="2" style="background-color:#d0d0a5">	
         <div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post1/full_grid.png" height="750" width="750" style="border:2px solid black"></div>
-        <div align="right"> Figure 3.</div>
+        <div align="right"> Figure 4.</div>
       </td>
     </tr>
+	<tr>
+	  <td colspan="2" style="background-color:#d0d0a5">	
+        <b>Conclusion:</b>
+		<p> In the example we are told that there is 7 ways to shoot the guard : [1, 0], [1, 2], [1, -2], [3, 2], [3, -2], [-3, 2], and [-3, -2].
+		<br> If we look at figure 4. starting from the player position and going towards each possible guard we can see that each answer matches up with a different guard.</p>
+		<p><b>The Code:</b>
+		<br>The code can be obtained from my github, the link is on-top of the page. There are a few minor differences between this explanation and the code. 
+		<br>Some examples: I perform the distance check during the first quadrant and then other few other times later on;
+		<br>Only the positions are generated and not the grids.
+		<br>Other small stuff but the code should be annotated to avoid confusion.</p> 
+      </td>
+	</tr>
 </table>
-
-<!--   			<p>$$\sqrt {(x_2-x_1)^2 +(y_2-y_1)^2}$$</p> -->
