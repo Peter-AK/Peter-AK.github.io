@@ -19,10 +19,6 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 		</td>
   	</tr>
 </table>
-
-
-
-
 <table>
   	<tr>
     	<td colspan="2" style="background-color:#eaeaea">
@@ -145,11 +141,9 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
         <b>Conclusion:</b>
 		<p> In the example we are told that there is 7 ways to shoot the guard : [1, 0], [1, 2], [1, -2], [3, 2], [3, -2], [-3, 2], and [-3, -2].
 		<br> If we look at figure 4. starting from the player position and going towards each possible guard we can see that each answer matches up with a different guard.</p>
-		<p><b>The Code:</b>
-		<br>The code can be obtained from my github, the link is on-top of the page. There are a few minor differences between this explanation and the code. 
-		<br>Some examples: I perform the distance check during the first quadrant and then other few other times later on;
-		<br>Only the positions are generated and not the grids.
-		<br>Other small stuff but the code should be annotated to avoid confusion.</p> 
+		<p><b>The Code:</b></p> 
       </td>
 	</tr>
 </table>
+
+<script src="http://gist-it.appspot.com/https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py"></script>
