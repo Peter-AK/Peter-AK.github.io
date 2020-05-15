@@ -126,7 +126,8 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 		<br>Now let's filter all the player + guards that have the same angle. Remember we can't shoot a guard that is behind a player or another guard, we can only shoot the closest character for each unique angle.</p>
 		<p>From Wiki:
 		"The function atan2(y,x) is defined as the angle in the Euclidean plane, given in radians, between the positive x axis and the ray to the point (x, y) ≠ (0, 0)."
-		<br> atan2 is available from the math module in python 2.7 standard lib</p>
+		<br>The atan2 function is available from the math module in python 2.7 standard lib.
+		<br>For atan(delta_y, delta_x) get the delta value from guard to player to get a unique angle.</p>
         <p>
 		If you take a look at Figure 4. you can see that everything behind the guard at [2, 1] is unshootable.
 		</p>
@@ -142,10 +143,7 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 	  <td colspan="2" style="background-color:#d0d0a5">	
         <b>Conclusion:</b>
 		<p> In the example we are told that there is 7 ways to shoot the guard : [1, 0], [1, 2], [1, -2], [3, 2], [3, -2], [-3, 2], and [-3, -2].
-		<br> If we look at figure 4. starting from the player position and going towards each possible guard we can see that each answer matches up with a different guard.</p>
-		<p><b>The Code:</b></p> 
+		<br> If we look at figure 4. Starting from the players position then going towards each possible guard, each answers match up with a different guard.</p>
       </td>
 	</tr>
 </table>
-
-<script src="https://gist.github.com/Peter-AK/7b1980669848ea566d54984cc66dd017.js"></script>
