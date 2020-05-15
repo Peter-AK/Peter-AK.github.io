@@ -148,4 +148,4 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 	</tr>
 </table>
 
-<script src="http://gist-it.appspot.com/https://github.com/Peter-AK/Bringing-a-gun-to-a-guard-fight/blob/master/bringing_a_gun_to_a_guard_fight.py"></script>
+<script src="https://gist.github.com/Peter-AK/7b1980669848ea566d54984cc66dd017.js"></script>
