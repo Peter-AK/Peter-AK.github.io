@@ -7,7 +7,7 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
 <table>
   	<tr>
     	<th style="text-align: center; vertical-align: middle;">
-    		<img src="{{ site.baseurl }}/assets/img/posts/post1/aline_gun.png" height="110" style="border:5px solid black" align="middle">
+    		<img src="{{ site.baseurl }}/assets/img/posts/post1/aline_gun.png" height="110" width="170" style="border:5px solid black" align="middle">
     	</th>
     	<th>
     		<a href="https://github.com/peter-ak/Bringing-a-gun-to-a-guard-fight"><img src="https://gh-card.dev/repos/peter-ak/Bringing-a-gun-to-a-guard-fight.svg"></a>
