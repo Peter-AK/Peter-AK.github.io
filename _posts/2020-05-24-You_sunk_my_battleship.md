@@ -16,8 +16,10 @@ title: You sunk my BattleShip! [GUI with PyQt5]
   	<tr>
     	<td colspan="2">
     		My take on a classic pencil and paper game with Python. The main challenge here is:
-			<br>1) To create a AI that is will be competitive that can make good logical choices
+			<br>1) To create a competitive AI that can make good logical choices.
+			&#09; &#09; Possible look into implementation of pre-made algorithms.
 			<br>2) Integrate everything with a smooth GUI/User experience using Qt for python.
+			&#09; &#09; I don't have much experience with GUI architecture, probably will be the most challenging part to do right.
 		</td>
   	</tr>
 </table>
