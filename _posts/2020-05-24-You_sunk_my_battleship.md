@@ -24,3 +24,24 @@ title: You sunk my BattleShip! [GUI with PyQt5]
   	</tr>
 </table>
 
+<table>
+  	<tr>
+    	<td  style="background-color:#eaeaea">
+			<h2> The Back-end: </h2>
+			<b><br>Saturday, June 06, 2020
+			<br>===============================</b>
+			<p style="text-align:left;">I want this project to have a fully functional back-end before I start my work on the GUI. The idea is to have a class called Player,
+			<br>this Player class will have a grid setup function that will be ran during its  __init__ method.</p>
+			<p style="text-align:left;">A PC subclass will inherit Player, with an addition of random module, the Pc can setup its own ships quite easily.
+			<br>(I don't think its necessary to add logic to ship placement since randomizing their locations seems like a fine strategy for me.)</p>
+			<p style="text-align:left;">This is what have been implemented so far, the player and the PC can setup their ships. Initially an ANCHOR point is chosen on the gird, then a selection of the end point is made.</p>
+		</td>
+		<td  style="background-color:#eaeaea">
+		<br>
+		<br>
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/jun-06.png"  style="border:2px solid black ">
+			</div>
+		</td>
+  	</tr>
+</table>
+
