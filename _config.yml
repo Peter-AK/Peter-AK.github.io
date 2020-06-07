@@ -13,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-      <p style="text-align:left">"From [Grothendieck], I have also learned not to take glory in the difficulty of a proof: difficulty means we have not understood.</p>
+      <p style="text-align:left">"I have also learned not to take glory in the difficulty of a proof: difficulty means we have not understood.</p>
       <p style="text-align:left"> The idea is to be able to paint a landscape in which the proof is obvious." </p>
       <p style="text-align:right">Pierre Deligne </p>
   header_text_feature_image: 
