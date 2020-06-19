@@ -29,8 +29,8 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 			<h2> The Rules: </h2>
 			<b><br>Thursday, June 18, 2020
 			<br>===============================</b>
-			<p style="text-align:left;">There are a couple of variations of the game BattleShip from what the wikipedia page tells me.
-			<br>The <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Battleships_Paper_Game.svg/2000px-Battleships_Paper_Game.svg.png"> Samuel Bednar</a> version seems to be quite interesting and the one that I will be model the game after.</p>
+			<p style="text-align:left;">Over the years there have been couple of variations of the game BattleShip from what the wikipedia page tells me.
+			<br>The <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Battleships_Paper_Game.svg/2000px-Battleships_Paper_Game.svg.png"> Samuel Bednar</a> version seems to be quite an interesting choice and the one that I will be model the game after.</p>
 			<p>Setup the following ships on your 10x10 grid:
 			<h3>Fleet of Ships</h3>
 			<table>
@@ -53,8 +53,9 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 				<td>Submarine</td>	<td>1</td>	<td>2</td>
 				</tr>
 				</table></p>
-			<p>Each round the player will fire a number of salvos corresponding to his ships that are alive.</p>
-			<p>The player who kill all his enemy's ships win </p>
+			<p>Each round the player will fire a number of salvos corresponding to the number of ships that are alive.
+			<br>The selection of grid spaces to attack will happen during the turn, the shots will be fired simultaneously at the end of the turn. The player will find out if he had hit something at the end of his turn.</p>
+			<p>The player who kill all his enemy's ships will win </p>
 		</td>
 		<td  style="background-color:#eaeaea">
 			<div align="middle"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Battleships_Paper_Game.svg"  style="border:2px solid black ">
