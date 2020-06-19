@@ -54,8 +54,8 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 				</tr>
 				</table></p>
 			<p>Each round the player will fire a number of salvos corresponding to the number of ships that are alive.
-			<br>The selection of grid spaces to attack will happen during the turn, the shots will be fired simultaneously at the end of the turn. The player will find out if he had hit something at the end of his turn.
-			<br>(Since a player has multiple shots during a given turn(unless he has 1 ship left), I think it's for the best that he only finds out at the end of the turn whether they hit. Otherwise it will give a big disadvantage to the player who starts second.)</p>
+			<br>The selection of grid spaces to attack will happen during the turn, the shots will be fired simultaneously at the end of the turn. The player will find out if he had hit something at the end of his turn.</p>
+			<p>(Since a player has multiple shots during a given turn [unless he has 1 ship left], I think it's for the best that he only finds out at the end of the turn whether they hit. Otherwise it will give a big disadvantage to the player who starts second.)</p>
 			<p>The player who kill all his enemy's ships will win </p>
 		</td>
 		<td  style="background-color:#eaeaea">
