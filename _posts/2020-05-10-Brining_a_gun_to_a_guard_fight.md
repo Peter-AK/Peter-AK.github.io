@@ -15,7 +15,8 @@ title: Bringing a gun to a guard fight<br> [Foobar with Google]
   	</tr>
   	<tr>
     	<td colspan="2">
-    		Level 4 question from the Google foobar challenge (one of my favorite questions from the challenge). How many ways can you hit a guard with a laser without hitting your-self? {Python}
+    		Level 4 question from the Google foobar challenge (one of my favorite questions from the challenge).
+			<br> How many ways can you hit a guard with a laser without hitting your-self?
 		</td>
   	</tr>
 </table>
