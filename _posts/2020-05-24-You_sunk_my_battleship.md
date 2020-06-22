@@ -83,8 +83,12 @@ title: You sunk my BattleShip! [GUI with PyQt5]
   	</tr>
 	  <tr>
     	<td  style="background-color:#eaeaea" colspan='2'>
+			<b><br>Saturday, June 21, 2020
+			<br>===============================</b>
+			<p> The structure for the back-end in mostly completed. Only minimum AI has been implemented so far, the opponent <br>will not shoot at previous location he shot in before. Other then that all the PC selection is random so far.</p>
+			<p> The work towards building a GUI for the game has started.</p>
 			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/workflow.png" height="450" width="750" style="border:2px solid black ">
-			</div>
+			</div><div align="right"> Figure 1. : Back end object interaction overview.</div>
 		</td>
   	</tr>
 </table>
