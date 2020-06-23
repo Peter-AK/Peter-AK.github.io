@@ -60,7 +60,7 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 		</td>
 		<td  style="background-color:#eaeaea">
 			<div align="middle"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Battleships_Paper_Game.svg"  style="border:2px solid black ">
-			</div>
+			</div><div align="right"> Figure 1. : A typical pen-and-paper version of the game.</div>
 		</td>
   	</tr>
   	<tr>
@@ -77,7 +77,7 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 		<td  style="background-color:#d0d0a5">
 		<br>
 		<br>
-			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/jun-06.png"  style="border:2px solid black ">
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/jun-06.png"  style="border:2px solid black "><div align="right"> Figure 2. : Ship testing placement.</div>
 			</div>
 		</td>
   	</tr>
@@ -88,7 +88,7 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 			<p> The structure for the back-end in mostly completed. Only minimum AI has been implemented so far, the opponent <br>will not shoot at previous location he shot in before. Other then that all the PC selection is random so far.</p>
 			<p> The work towards building a GUI for the game has started.</p>
 			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/workflow.png" height="450" width="750" style="border:2px solid black ">
-			</div><div align="right"> Figure 1. : Back end object interaction overview.</div>
+			</div><div align="right"> Figure 3. : Back end object interaction overview.</div>
 		</td>
   	</tr>
 </table>
