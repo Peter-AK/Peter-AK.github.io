@@ -91,5 +91,20 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 			</div><div align="right"> Figure 3. : Back end object interaction overview.</div>
 		</td>
   	</tr>
+	<tr>
+    	<td style="background-color:#d0d0a5">
+			<b><br>Saturday, July 07, 2020
+			<br>===============================</b>
+			<p> &nbsp;The GUI development so far has been a bit slow due to other work getting in the way and the fact that I'm pretty new the the Qt framework. </p>
+			<p>The setup interface is almost done. The interface uses the same back-end logic,<br> a) takes one anchor point <br>b) generates all possible end location based on the ships length.<br> The only adjustment made to the back-end was how it receives the user inputs. </p>
+			<p> The button grid is generated via a for loop and placed in a QButtonGroup with an ID based on it's location. I use this button id to do most of the manipulations.</p>
+		</td>
+		<td style="background-color:#d0d0a5">
+		<br>
+		<br>
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/setup_gui.gif"  style="border:2px solid black "><div align="right"> Figure 3. : Setup GUI screen.</div>
+			</div>
+		</td>
+  	</tr>
 </table>
 
