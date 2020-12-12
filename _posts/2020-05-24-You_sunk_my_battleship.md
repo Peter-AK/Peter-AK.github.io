@@ -121,9 +121,7 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 			<b><br>Friday, December 11, 2020 
 			<br>===============================</b>
 			<p> &nbsp;Splash screen</p>
-		<br>
-		<br>
-			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/splash_screen.PNG" height="450" width="750" style="border:2px solid black "><div align="right"> Figure 5. : Setup GUI screen.</div>
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/splash_screen.PNG" style="border:2px solid black "><div align="right"> Figure 6. : Splash screen GUI.</div>
 			</div>
 		</td>
   	</tr>
