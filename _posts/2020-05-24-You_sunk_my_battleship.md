@@ -93,7 +93,7 @@ title: You sunk my BattleShip! [GUI with PyQt5]
   	</tr>
 	<tr>
     	<td style="background-color:#d0d0a5">
-			<b><br>Saturday, July 07, 2020
+			<b><br>Saturday, July 07, 2020 (updated: Aug, 03)
 			<br>===============================</b>
 			<p> &nbsp;The GUI development so far has been a bit slow due to other work getting in the way and the fact that I'm pretty new the the Qt framework. </p>
 			<p>The setup interface is almost done. The interface uses the same back-end logic,<br> a) takes one anchor point <br>b) generates all possible end location based on the ships length.<br> The only adjustment made to the back-end was how it receives the user inputs. </p>
@@ -102,7 +102,28 @@ title: You sunk my BattleShip! [GUI with PyQt5]
 		<td style="background-color:#d0d0a5">
 		<br>
 		<br>
-			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/setup_gui.gif"  style="border:2px solid black "><div align="right"> Figure 3. : Setup GUI screen.</div>
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/setup_gui.gif"  style="border:2px solid black "><div align="right"> Figure 4. : Setup GUI screen.</div>
+			</div>
+		</td>
+  	</tr>
+	  <tr>
+    	<td  style="background-color:#eaeaea" colspan='2'>
+			<b><br>Saturday, June 21, 2020
+			<br>===============================</b>
+			<p> The structure for the back-end in mostly completed. Only minimum AI has been implemented so far, the opponent <br>will not shoot at previous location he shot in before. Other then that all the PC selection is random so far.</p>
+			<p> The work towards building a GUI for the game has started.</p>
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/combat_gui.gif" height="350" width="750" style="border:2px solid black ">
+			</div><div align="right"> Figure 5. : Back end object interaction overview.</div>
+		</td>
+  	</tr>
+	<tr>
+    	<td style="background-color:#d0d0a5" colspan='2'>
+			<b><br>Friday, December 11, 2020 
+			<br>===============================</b>
+			<p> &nbsp;Splash screen</p>
+		<br>
+		<br>
+			<div align="middle"><img src="{{ site.baseurl }}/assets/img/posts/post2/splash_screen.PNG" height="450" width="750" style="border:2px solid black "><div align="right"> Figure 5. : Setup GUI screen.</div>
 			</div>
 		</td>
   	</tr>
